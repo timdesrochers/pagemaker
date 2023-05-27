@@ -7,9 +7,9 @@ import urllib.parse
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Generate an HTML file from content and metadata files.")
-    parser.add_argument("--content", required=True, help="Path to the content file (plain text or markdown).")
-    parser.add_argument("--metafile", required=True, help="Path to the metadata file (JSON).")
-    parser.add_argument("--output", help="Path to the output HTML file (optional).")
+    parser.add_argument("-i", "--content", required=True, help="Path to the content file (plain text or markdown).")
+    parser.add_argument("-m", "--metafile", required=True, help="Path to the metadata file (JSON).")
+    parser.add_argument("-o", "--output", help="Path to the output HTML file (optional).")
     return parser.parse_args()
 
 def choose_option(options, prompt):
