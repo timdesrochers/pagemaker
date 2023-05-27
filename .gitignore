@@ -1,4 +1,5 @@
 .venv/
 tests/
+bk/
 outputs/
 .DS_Store
