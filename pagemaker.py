@@ -58,7 +58,7 @@ def main():
         if not output_file.endswith(".html"):
             output_file += ".html"
     else:
-        output_file = f"{urllib.parse.quote(headline)}.html"
+        output_file = f"{urllib.parse.quote_plus(headline)}.html"
 
     # Create the HTML file
     html_content = (
@@ -79,9 +79,12 @@ def main():
         "</div>"
         f'<div id="content.content">{content_html}</div>'
         '<div id="content.footer">'
+        '<hr />'
+        '<h5>Related Topics</h5>'
         "<ul>"
         + "".join(f"<li>{topic}</li>" for topic in meta["related_topics"])
         + "</ul>"
+            '<h5>Keywords</h5>'
         "<ul>"
         + "".join(f"<li>{keyword}</li>" for keyword in meta["keywords"])
         + "</ul>"
