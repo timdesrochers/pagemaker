@@ -1,0 +1,4 @@
+.venv/
+tests/
+outputs/
+.DS_Store
